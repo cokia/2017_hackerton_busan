@@ -6,11 +6,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>친해지기 바라</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
         <script src="https://use.fontawesome.com/ead5f04d09.js"></script>
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
             body {
@@ -28,7 +29,7 @@
     </head>
     <body style="margin-bottom: 0px; padding-bottom: 0px;">
         <!--[if lt IE 7]>
-            <p class="chromeframe">이런! 너무 낡은 브라우저다냥! 너무너무 낡았다냥! 업그레이드하라냥!. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
         <!-- Content -->
@@ -38,13 +39,15 @@
                 <div class="span12">
                     <div class="navbar navbar-inverse navbar-fixed-top">
                         <div class="navbar-inner">
-                                <a class="brand" href="./index.html">&nbsp;&nbsp;&nbsp;<i class="icon-comment icon-white"></i>&nbsp;친해지기 바래&nbsp;</a>
+                                <a class="brand" href="./index.html">&nbsp;&nbsp;&nbsp;<i class="icon-comment icon-white"></i>&nbsp;친해지기 바라&nbsp;</a>
                                 <ul class="nav pull-right">
                                     <li class="divider-vertical"></li>
 
                                 </ul>
                         </div>
                     </div>
+                </div>
+            </div>
             <!-- End Header -->
 
             <!-- Rooms -->
@@ -142,7 +145,6 @@
                     </select>
                     반
 
-
                     <button onclick="complete_input()">완료</button>
                     <p id="room_choose"></p>
                     <script type="text/javascript">
@@ -150,7 +152,7 @@
                         function complete_input() {
                             var temp1 = document.getElementById("select_grade").value;
                             var temp2 = document.getElementById("select_class").value;
-                            Room_name = temp1+ " " +temp2;
+                            Room_name = temp1+ "_" +temp2;
                             document.getElementById("room_choose").innerHTML=("당신의 반 Room name 은 \'" + Room_name + "\' 입니다");
                         }
                     </script>
@@ -171,9 +173,12 @@
                 <h3>Team : 3만원만 주세요</h3>
             </div>
             <div class="modal-body">
+                <img src="https://hanukoon-my.sharepoint.com/personal/solmin03010_hanukoon_com/_layouts/15/guestaccess.aspx?docid=1b1e3a20e781a4d50ae72d96172b1de7b&authkey=AZ59gQkwt7Jo7TKtRjqK6qM&e=afacdfdd826343119a18074d0ff9b6da
+                " align="center" >
                 <p>
                     이것은 3만원만 주세요 팀의 프로젝트 친해지길 바래 입니다.새학기가 시작되고<br>
-                    어색함이 흐르는 반 분위기를 어떻게 바꿀 수 있을 까 생각을 해본 결과저희는 서로 대화를 하며 서로를 알아가는 것이 가장 좋다고 판단하였고그래서 서로 편견없이 스스럼 없이 대화할 수 있는 프로그램을 만들었습니다이 프로그램은 ~~기반으로 여러가지 기능을 만들었습니다이 프로젝트를 진행하고 있는 3만원만 주세요 팀음 문혜승 팀장을 주도로윤솔민, 설지원, 한우영 이렇게 4명으로 구성되어 있습니다.
+                    어색함이 흐르는 반 분위기를 어떻게 바꿀 수 있을 까 생각을 해본 결과저희는 서로 대화를 하며 서로를 알아가는 것이 가장 좋다고 판단하였고그래서 서로 편견없이 스스럼 없이 대화할 수 있는 프로그램을 만들었습니다<br>
+                    이 프로그램은 Node.JS, javascript, socket.io 등 기반으로 여러가지 기능을 만들었습니다이 프로젝트를 진행하고 있는 3만원만 주세요 팀은 문혜승 팀장을 주도로 윤솔민, 설지원, 한우영 이렇게 4명으로 구성되어 있습니다.
                 </p>
             </div>
             <div class="modal-footer">
@@ -182,62 +187,59 @@
         </div>
         <!-- End info room modal -->
 
-        <!-- info room modal -->
-                <!-- Join room modal -->
-                <div id="modal_Manito" class="modal hide fade">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h3>마니또 뽑기</h3>
-                    </div>
-                    <div class="modal-body">
-                        <select name="학년" style="width:130px" id = "select_grade">
-                            <option value="1학년" id = "f_1">1</option>
-                            <option value="2학년" id = "f_2">2</option>
-                            <option value="3학년" id = "f_3">3</option>
-                        </select>
-                        학년
-                        <select name="반" style="width:130px" id = "select_class">
-                            <option value="1반" id = c_1>1</option>
-                            <option value="2반" id = c_2>2</option>
-                            <option value="3반" id = c_3>3</option>
-                            <option value="4반" id = c_4>4</option>
-                            <option value="5반" id = c_5>5</option>
-                            <option value="6반" id = c_6>6</option>
-                        </select>
-                        반
-                        <select name="번호" style="width:130px" id = "select_number">
-                            <option value="1" id = n_1>1</option>
-                            <option value="2" id = n_2>2</option>
-                            <option value="3" id = n_3>3</option>
-                            <option value="4" id = n_4>4</option>
-                            <option value="5" id = n_5>5</option>
-                            <option value="6" id = n_6>6</option>
-                            <option value="7" id = n_7>7</option>
-                            <option value="8" id = n_8>8</option>
-                            <option value="9" id = n_9>9</option>
-                            <option value="10" id = n_10>10</option>
-                        </select>
-                        번호
+        <!-- Join room modal -->
+        <div id="modal_Manito" class="modal hide fade">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>마니또 뽑기</h3>
+            </div>
+            <div class="modal-body">
+                <select name="학년" style="width:130px" id = "select_grade2">
+                    <option value="1학년" id = "grade_1">1</option>
+                    <option value="2학년" id = "grade_2">2</option>
+                    <option value="3학년" id = "grade_3">3</option>
+                </select>
+                학년
+                <select name="반" style="width:130px" id = "select_class2">
+                    <option value="1반" id = class_1>1</option>
+                    <option value="2반" id = class_2>2</option>
+                    <option value="3반" id = class_3>3</option>
+                    <option value="4반" id = class_4>4</option>
+                    <option value="5반" id = class_5>5</option>
+                    <option value="6반" id = class_6>6</option>
+                </select>
+                반
+                <select name="번호" style="width:130px" id = "select_number2">
+                    <option value=1 id = n_1>1</option>
+                    <option value=2 id = n_2>2</option>
+                    <option value=3 id = n_3>3</option>
+                    <option value=4 id = n_4>4</option>
+                    <option value=5 id = n_5>5</option>
+                    <option value=6 id = n_6>6</option>
+                    <option value=7 id = n_7>7</option>
+                    <option value=8 id = n_8>8</option>
+                    <option value=9 id = n_9>9</option>
+                    <option value=10 id = n_10>10</option>
+                </select>
+                번호
 
+                <button onclick = "array_input_output()">완료</button>
+                <p id = your_manitto></p>
+                <script type="text/javascript">
+                    var people = ["윤솔민" , "문혜승" , "설지원" , "한우영" ,"조성호" , "김상민" , "손위혁" ,"김광호" , "김민수", "홍길동"];
+                    var your_manito;
+                    function array_input_output(){
+                        var temp_name = document.getElementById("select_number2").value;
+                        your_manito = [temp_name*1-1];
+                        document.getElementById("your_manitto").innerHTML=("당신의 마니또는 \'" + people[your_manito] + "\' 입니다");
+                    }
+                </script>
+            </div>
+            <div class="modal-footer">
+                <p style="text-algin: right"><small> Mission : 비밀친구 마니또를 챙겨주기! </small></p>
+            </div>
 
-                        <button onclick="complete1_input()">완료</button>
-                        <p id="manitoo"></p>
-                        <script type="text/javascript">
-                           var arr = newArray("윤솔민" , "문혜승" , "설지원" , "한우영" ,"조성호" , "김상민" , "손위혁" ,"김광호 , "김민수" ,"홍길동");
-
-                            function complete1_input() {
-                                var temp1 = document.getElementById("select_grade").value;
-                                var temp2 = document.getElementById("select_class").value;
-                                var temp3 = document.getElementById("select_number").value;
-                                manito = arr[temp3 - 1];
-                                document.getElementById("manitoo").innerHTML=("당신의 마니또는 \'" + manito + "\' 입니다");
-                            }
-                        </script>
-
-
-                    </div>
-
-                </div>
+        </div>
         <!-- End info room modal -->
 
 
