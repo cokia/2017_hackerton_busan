@@ -1,8 +1,9 @@
-# SimpleChat
+
+
 
 Built with:
-
-  - <strong>Server side:</strong> Node.js, Socket.io, Express, Redis
+  - <string>main chat : github.com/tegioz/chat
+  - <strong>Server side:</strong> Node.js, Socket.io, Express, Redis 
   - <strong>Client side:</strong> HTML5 Boilerplate, Bootstrap, Handlebars and jQuery
 
 This is just a <strong>proof of concept</strong> of what could be done with these technologies.
@@ -17,7 +18,7 @@ If you just want to see it running, visit: http://chat.tegioz.com
 
 ### Get the code
 
-    git clone https://github.com/tegioz/chat.git
+    git clone https://github.com/cokia/2017_hackerton_busan
 
 ### Run
 
