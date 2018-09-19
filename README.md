@@ -1,24 +1,19 @@
 
+# 2018 부산시 학생 해커톤
 
-
-Built with:
+- We used Chat.js made by tegioz
+- <string>Chat.JS : github.com/tegioz/chat
+  
+### Built with:
   - <string>main chat : github.com/tegioz/chat
   - <strong>Server side:</strong> Node.js, Socket.io, Express, Redis 
   - <strong>Client side:</strong> HTML5 Boilerplate, Bootstrap, Handlebars and jQuery
-
-This is just a <strong>proof of concept</strong> of what could be done with these technologies.
-
-If you just want to see it running, visit: http://chat.tegioz.com
 
 ### Requires
 
   - Node.js
   - NPM (Node Package Manager)
   - Redis
-
-### Get the code
-
-    git clone https://github.com/cokia/2017_hackerton_busan
 
 ### Run
 
